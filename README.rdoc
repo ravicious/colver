@@ -1,6 +1,17 @@
 = colver
 
-Description goes here.
+If you are a <b>col</b>or lo<b>ver</b>, then this gem is for you! Play with colors and make them happy.
+
+  Color.new [127, 63, 255] #=> #<Color: hex: 7f3fff, rgb: [127, 63, 255]>
+  Color.new 'a4cf13'       #=> #<Color: hex: a4cf13, rgb: [164, 207, 19]>
+  Color.new 'colver'       #=> #<Color: hex: 16b558, rgb: [22, 181, 88]>
+
+Yeah - if you pass a non-hex string, colver will generate a color from it! You can also invert colors:
+
+  color = Color.new 'github' #=> #<Color: hex: 64b2b6, rgb: [100, 178, 182]>
+  color.invert               #=> #<Color: hex: 9b4d49, rgb: [155, 77, 73]>
+
+More features coming soon.
 
 == Contributing to colver
  

@@ -32,12 +32,14 @@ class Color
   private
 
   # Converts a string to a color. Also checks if the string is a hex:
-  #  - if yes: returns it
-  #  - if not: generates a hash and truncates it to the first six chars
+  #
+  # - if yes: returns it
+  # - if not: generates a hash and truncates it to the first six chars
+  #
+  # If string looks like "ab" or "1cb67", makes it longer
   def from_string(string)
     string = (string =~ /\A[a-fA-F0-9]{1,6}\z/ ? string : Digest::SHA1.hexdigest(string)[0..5]).downcase
 
-    # If string looks like "ab" or "1cb67", makes it longer
     until string[0..5].length == 6
       string += string
     end
