@@ -14,8 +14,8 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "colver"
-  gem.summary = %Q{Simple gem for playing with colors}
-  gem.description = %Q{Simple gem for playing with colors}
+  gem.summary = %Q{A simple gem for playing with colors.}
+  gem.description = %Q{A simple gem for playing with colors.}
   gem.email = "ravicious@gmail.com"
   gem.homepage = "http://github.com/ravicious/colver"
   gem.authors = ["Rafał Cieślak"]
