@@ -21,6 +21,11 @@ class Color
   end
   alias :to_a :rgb
 
+  def eql?(other_color)
+    self.class.equal?(other_color.class) && hex == other_color.hex
+  end
+  alias :== :eql?
+
   def inspect
     "#<Color: hex: #{hex}, rgb: #{rgb}>"
   end

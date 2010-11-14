@@ -71,6 +71,11 @@ describe Color do
       @color.invert.rgb.should == [21, 184, 192]
     end
 
+    it "should be equal to the other color instance with the same values" do
+      other_color = described_class.new('ea473f')
+      @color.should == other_color
+    end
+
     describe "#inspect" do
       it "should respond with human-readable representation of a color" do
         @color.inspect.should == "#<Color: hex: ea473f, rgb: [234, 71, 63]>"
