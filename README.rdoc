@@ -3,7 +3,10 @@
 If you are a <b>col</b>or lo<b>ver</b>, then this gem is for you! Play with colors and make them happy.
 
   Color.new [127, 63, 255] #=> #<Color: hex: 7f3fff, rgb: [127, 63, 255]>
+  [127, 63, 255].to_color  #=> #<Color: hex: 7f3fff, rgb: [127, 63, 255]>
   Color.new 'a4cf13'       #=> #<Color: hex: a4cf13, rgb: [164, 207, 19]>
+  'a4cf13'.to_color        #=> #<Color: hex: a4cf13, rgb: [164, 207, 19]>
+  672904.to_color          #=> #<Color: hex: 672904, rgb: [103, 41, 4]>
   Color.new 'colver'       #=> #<Color: hex: 16b558, rgb: [22, 181, 88]>
 
 Yeah - if you pass a non-hex string, colver will generate a color from it! You can also invert colors:
