@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{colver}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rafał Cieślak"]
-  s.date = %q{2010-11-13}
-  s.description = %q{Simple gem for playing with colors}
+  s.date = %q{2010-11-14}
+  s.description = %q{A simple gem for playing with colors.}
   s.email = %q{ravicious@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -25,17 +25,21 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "colver.gemspec",
     "lib/colver.rb",
     "lib/colver/color.rb",
+    "lib/colver/conversions.rb",
     "spec/color_spec.rb",
+    "spec/conversions_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/ravicious/colver}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Simple gem for playing with colors}
+  s.summary = %q{A simple gem for playing with colors.}
   s.test_files = [
     "spec/color_spec.rb",
+    "spec/conversions_spec.rb",
     "spec/spec_helper.rb"
   ]
 
