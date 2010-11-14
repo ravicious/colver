@@ -10,14 +10,14 @@ describe Color do
 
   describe 'instance with an array' do
     context 'with valid RGB values' do
-      subject { Color.new([55, 3, 169]) }
+      subject { described_class.new([55, 3, 169]) }
 
       its(:hex) { should == "3703a9" }
       its(:rgb) { should == [55, 3, 169] }
     end
 
     context 'with low RGB values' do
-      subject { Color.new([1, 2, 3]) }
+      subject { described_class.new([1, 2, 3]) }
 
       its(:hex) { should == "010203" }
       its(:rgb) { should == [1, 2, 3] }
@@ -31,7 +31,7 @@ describe Color do
 
   describe 'instance with an string' do
     context 'which is a word (for example "ravicious")' do
-      subject { Color.new 'ravicious' }
+      subject { described_class.new 'ravicious' }
 
       its(:hex) { should == "fd3f3a" }
       its(:rgb) { should == [253, 63, 58] }
@@ -39,17 +39,17 @@ describe Color do
 
     context 'which is already a hex value' do
       context 'with 6 chars' do
-        subject { Color.new '1b4fcd' }
+        subject { described_class.new '1b4fcd' }
 
         its(:hex) { should == '1b4fcd' }
         its(:rgb) { should == [27, 79, 205] }
       end
 
       context 'with less than 6 chars' do
-        subject { Color.new '1b' }
+        subject { described_class.new '1b' }
 
         describe "hex" do
-          before { @hex = Color.new('1b').hex }
+          before { @hex = described_class.new('1b').hex }
 
           it "should get longer" do
             @hex.should == '1b1b1b'
@@ -64,7 +64,7 @@ describe Color do
   end
 
   describe "valid instance" do
-    before { @color = Color.new([234, 71, 63]) }
+    before { @color = described_class.new([234, 71, 63]) }
 
     it "should invert itself to the other color" do
       @color.invert.should be_instance_of Color

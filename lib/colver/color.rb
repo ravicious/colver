@@ -6,9 +6,10 @@ class Color
   alias :to_s :hex
 
   def initialize(color)
-    if color.class == Array
+    case color
+    when Array
       from_array color
-    elsif color.class == String
+    when String
       from_string color
     else
       raise ArgumentError, "Color#new argument must be an array or a string!"
